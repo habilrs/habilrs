@@ -12,12 +12,20 @@
   />
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
-      height: 100vh;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
       color: white;
       text-shadow: 2px 2px 5px black;
+    }
+
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -57,6 +65,9 @@
     .content-wrapper {
       text-align: center;
       z-index: 2;
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
     }
 
     .welcome-text {
@@ -67,7 +78,7 @@
     }
 
     .card-custom {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.85);
       color: #000;
       border: none;
       border-radius: 10px;
@@ -84,12 +95,10 @@
 
   <div class="content-wrapper">
     <div class="welcome-text">Selamat Datang di Website Saya</div>
-    <div class="col-md-12 d-flex justify-content-center">
-      <div class="card card-custom p-4" style="max-width: 400px;">
-        <h5 class="card-title">Tugas Anda</h5>
-        <p class="card-text">Silakan unduh tugas Anda dengan menekan tombol di bawah:</p>
-        <a href="UTS HABIL RAHMAN SHOLEH 2407110968.pdf" class="btn btn-custom" download>Unduh Tugas</a>
-      </div>
+    <div class="card card-custom p-4 mx-auto" style="max-width: 400px;">
+      <h5 class="card-title">Tugas Anda</h5>
+      <p class="card-text">Silakan unduh tugas Anda dengan menekan tombol di bawah:</p>
+      <a href="UTS HABIL RAHMAN SHOLEH 2407110968.pdf" class="btn btn-custom" download>Unduh Tugas</a>
     </div>
   </div>
 
