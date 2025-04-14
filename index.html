@@ -7,8 +7,6 @@
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
     rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-    crossorigin="anonymous"
   />
 
   <style>
@@ -21,8 +19,6 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      color: white;
-      text-shadow: 2px 2px 5px black;
     }
 
     body {
@@ -30,7 +26,8 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      z-index: 1;
+      background-color: black;
+      overflow: hidden;
     }
 
     .background {
@@ -45,43 +42,34 @@
     }
 
     @keyframes moveBackground {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.1);
-      }
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
     }
 
     @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .content-wrapper {
       text-align: center;
-      z-index: 2;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      animation: fadeIn 2s ease-in-out;
+      padding: 30px;
       max-width: 700px;
       width: 100%;
-      padding: 20px;
     }
 
     .welcome-text {
       font-size: 2.5em;
       font-weight: bold;
-      animation: fadeIn 2s ease-in-out;
       margin-bottom: 30px;
-      white-space: normal; /* memastikan teks membungkus jika terlalu panjang */
     }
 
     .card-custom {
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(255, 255, 255, 0.9);
       color: #000;
-      border: none;
       border-radius: 10px;
     }
 
@@ -99,28 +87,26 @@
   <div class="background"></div>
 
   <div class="content-wrapper">
-    <div class="welcome-text">
-      Selamat Datang di Website Saya, Bersama Habil
-    </div>
+    <div class="welcome-text">Selamat Datang di Website Saya, Bersama Habil</div>
 
     <!-- Link ke Video -->
     <p>Untuk menonton video, klik tautan berikut:</p>
     <a href="https://youtu.be/BZ6nevHQcww?si=DItluYKTwHe1wZx5" target="_blank" class="btn btn-custom mb-3">Tonton Video</a>
 
-    <!-- Spotify -->
+    <!-- Spotify Embed -->
     <div class="spotify-embed">
       <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/track/0m98Oczk3eTPZAol7KPtdE?utm_source=generator"
         width="100%"
         height="352"
-        frameBorder="0"
+        frameborder="0"
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy">
       </iframe>
     </div>
 
-    <!-- Card Unduh Tugas -->
+    <!-- Card untuk Tugas -->
     <div class="card card-custom p-4 mx-auto" style="max-width: 400px;">
       <h5 class="card-title">Tugas Anda</h5>
       <p class="card-text">Silakan unduh tugas Anda dengan menekan tombol di bawah:</p>
@@ -128,6 +114,6 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
