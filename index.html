@@ -7,6 +7,8 @@
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
     rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+    crossorigin="anonymous"
   />
 
   <style>
@@ -19,6 +21,8 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
+      color: white;
+      text-shadow: 2px 2px 5px black;
     }
 
     body {
@@ -26,9 +30,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      background-color: black;
-      overflow: hidden;
-      color: white;  /* Set default text color to white */
+      z-index: 1;
     }
 
     .background {
@@ -43,22 +45,29 @@
     }
 
     @keyframes moveBackground {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.1); }
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
     .content-wrapper {
       text-align: center;
-      z-index: 1;
-      padding: 20px;
-      max-width: 700px;
+      z-index: 2;
+      max-width: 600px;
       width: 100%;
-      position: relative;
+      padding: 20px;
     }
 
     .welcome-text {
@@ -66,12 +75,12 @@
       font-weight: bold;
       animation: fadeIn 3s ease-in-out;
       margin-bottom: 30px;
-      text-shadow: 2px 2px 5px black;  /* Add shadow to make text stand out */
     }
 
     .card-custom {
       background-color: rgba(255, 255, 255, 0.85);
       color: #000;
+      border: none;
       border-radius: 10px;
     }
 
@@ -89,11 +98,11 @@
   <div class="background"></div>
 
   <div class="content-wrapper">
-    <div class="welcome-text">Selamat Datang di Website Saya, Bersama Habil</div>
-
-    <!-- Link ke Video -->
+    <div class="welcome-text">Selamat Datang di Website Saya, Dengan Habil</div>
+    
+    <!-- Link ke Video Eksternal -->
     <p>Untuk menonton video, klik tautan berikut:</p>
-    <a href="https://youtu.be/BZ6nevHQcww?si=DItluYKTwHe1wZx5" target="_blank" class="btn btn-custom mb-3">Tonton Video</a>
+    <a href="https://youtu.be/BZ6nevHQcww?si=DItluYKTwHe1wZx5" target="_blank" class="btn btn-custom">Tonton Video</a>
 
     <!-- Spotify Embed -->
     <div class="spotify-embed">
