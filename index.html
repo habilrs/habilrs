@@ -65,16 +65,17 @@
     .content-wrapper {
       text-align: center;
       z-index: 2;
-      max-width: 600px;
+      max-width: 700px;
       width: 100%;
       padding: 20px;
     }
 
     .welcome-text {
-      font-size: 3em;
+      font-size: 2.5em;
       font-weight: bold;
-      animation: fadeIn 3s ease-in-out;
+      animation: fadeIn 2s ease-in-out;
       margin-bottom: 30px;
+      white-space: normal; /* memastikan teks membungkus jika terlalu panjang */
     }
 
     .card-custom {
@@ -98,26 +99,28 @@
   <div class="background"></div>
 
   <div class="content-wrapper">
-    <div class="welcome-text">Selamat Datang di Website Saya, Dengan Habil</div>
+    <div class="welcome-text">
+      Selamat Datang di Website Saya, Bersama Habil
+    </div>
 
-    <!-- Link ke Video Eksternal -->
+    <!-- Link ke Video -->
     <p>Untuk menonton video, klik tautan berikut:</p>
-    <a href="https://youtu.be/BZ6nevHQcww?si=DItluYKTwHe1wZx5" target="_blank" class="btn btn-custom">Tonton Video</a>
+    <a href="https://youtu.be/BZ6nevHQcww?si=DItluYKTwHe1wZx5" target="_blank" class="btn btn-custom mb-3">Tonton Video</a>
 
-    <!-- Embed Spotify -->
+    <!-- Spotify -->
     <div class="spotify-embed">
-      <iframe style="border-radius:12px" 
-        src="https://open.spotify.com/embed/track/0m98Oczk3eTPZAol7KPtdE?utm_source=generator" 
-        width="100%" 
-        height="352" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/0m98Oczk3eTPZAol7KPtdE?utm_source=generator"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy">
       </iframe>
     </div>
 
-    <!-- Card Tugas -->
+    <!-- Card Unduh Tugas -->
     <div class="card card-custom p-4 mx-auto" style="max-width: 400px;">
       <h5 class="card-title">Tugas Anda</h5>
       <p class="card-text">Silakan unduh tugas Anda dengan menekan tombol di bawah:</p>
