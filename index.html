@@ -64,6 +64,24 @@
         opacity: 1;
       }
     }
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Habil's Web</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#form-kontak">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tugas">Tugas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Beri margin-top agar tidak ketutupan navbar -->
+<div style="margin-top: 80px;"></div>
 
     .content-wrapper {
       text-align: center;
@@ -151,6 +169,25 @@
         class="btn btn-custom"
         download
       >
+    <div id="form-kontak" class="card card-custom p-4 mx-auto mt-5" style="max-width: 500px;">
+  <h5 class="card-title">Hubungi Saya</h5>
+  <form>
+    <div class="mb-3">
+      <label for="nama" class="form-label">Nama</label>
+      <input type="text" class="form-control" id="nama" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="pesan" class="form-label">Pesan</label>
+      <textarea class="form-control" id="pesan" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-custom">Kirim</button>
+  </form>
+</div>
+        
         Unduh Tugas
       </a>
     </div>
